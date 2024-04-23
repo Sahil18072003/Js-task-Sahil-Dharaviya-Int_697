@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .Bmi {
+        top: 2%;
+        right: 35%;
+        height: 500px;
+        width: 500px;
+        background-color: orange;
+        position: absolute;
+        text-align: center;
+        border-radius: 10%;
+      }
+
+      #btn {
+        top: 400px;
+        width: 100px;
+        height: 50px;
+        position: sticky;
+        border-radius: 8px;
+        background-color: lightgreen;
+      }
+      .dot {
+        top: 250px;
+        height: 100px;
+        width: 100px;
+        right: 15%;
+        background-color: #f30505;
+        border-radius: 100px;
+        display: inline-block;
+        position: relative;
+      }
+      .dot1 {
+        top: 250px;
+        height: 100px;
+        width: 100px;
+        left: 15%;
+        background-color: #f30505;
+        border-radius: 100px;
+        display: inline-block;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Bmi">
+      <span class="dot"></span>
+      <span class="dot1"></span>
+      <h1 class="bmi">BMI</h1>
+      <button id="btn" onclick="clicked">BMI</button>
+    </div>
+
+    <script>
+      //   const Markmass = 78;
+      //   const Markheight = 1.69;
+      //   const Johnmass = 92;
+      //   const Johnheight = 1.95;
+
+      const Markmass = 95;
+      const Markheight = 1.88;
+      const Johnmass = 85;
+      const Johnheight = 1.76;
+
+      const BMIMark = Markmass / Markheight ** 2;
+      const BMIJohn = Johnmass / (Johnheight * Johnheight);
+
+      const click = document.getElementById("btn");
+
+      click.onclick = function () {
+        console.log(BMIMark, BMIJohn);
+
+        if (BMIMark > BMIJohn) {
+          console.log(`Mark BMI (${BMIMark}) is higher than John (${BMIJohn})`);
+          document.querySelector(
+            ".bmi"
+          ).textContent = `Mark BMI (${BMIMark}) is higher than John BMI (${BMIJohn})`;
+        } else {
+          console.log(
+            `John BMI (${BMIJohn}) is higher than Marks (${BMIMark})`
+          );
+          document.querySelector(
+            ".bmi"
+          ).textContent = `John BMI (${BMIJohn}) is higher than Marks BMI (${BMIMark})`;
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .tip {
+        position: absolute;
+        top: 80%;
+        right: 40%;
+      }
+      .Hello {
+        position: sticky;
+        top: 40%;
+        right: 50%;
+        text-align: center;
+      }
+      .text {
+        top: 30%;
+        right: 20%;
+      }
+      #tipclick {
+        border-radius: 5px;
+        background-color: rgb(252, 30, 237);
+        top: 20px;
+        width: 100px;
+        height: 50px;
+        text-transform: uppercase;
+        font-weight: 900;
+      }
+      .box {
+        top: 5%;
+        right: 35%;
+        height: 500px;
+        width: 500px;
+        background-color: yellow;
+        position: absolute;
+        text-align: center;
+        border-radius: 10%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Bill Calculator</h1>
+      <h1 class="bill">Bill</h1>
+      <h1 class="Tip">Tip</h1>
+      <div class="Hello">
+        <h1 class="text">Hello</h1>
+      </div>
+      <div class="tip">
+        <button id="tipclick" onclick="clicked">TipCalk</button>
+      </div>
+    </div>
+    <script src="tip.js"></script>
+  </body>
+</html>
