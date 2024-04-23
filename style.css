@@ -1,0 +1,27 @@
+.box {
+    margin: auto;
+    text-align: center;
+    height: 500px;
+    width: 500px;
+    background-color: yellow;
+    border-radius: 20px;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+}
+
+#btn,
+#btn2,
+#btn3 {
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.a {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}

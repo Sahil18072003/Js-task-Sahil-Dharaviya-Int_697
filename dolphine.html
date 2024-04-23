@@ -5,130 +5,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <style>
-    .btn {
-      position: absolute;
-      top: 50%;
-      right: 50%;
-    }
-
-    #btn {
-      background-color: red;
-      height: 30px;
-      width: 60px;
-      border-radius: 10px;
-    }
-
-    #btn2 {
-      background-color: greenyellow;
-      height: 30px;
-      width: 60px;
-      border-radius: 10px;
-    }
-
-    #btn3 {
-      background-color: orange;
-      height: 30px;
-      width: 60px;
-      border-radius: 10px;
-    }
-
-    .a {
-      position: absolute;
-      top: 30%;
-      right: 30%;
-    }
-  </style>
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-  <div class="btn">
-    <div>
-      <div class="a">
-        <h1 class="select">Hello</h1>
-      </div>
+  <div class="box">
+    <div class="a">
+      <h1 class="select">Hello</h1>
     </div>
-    <button id="btn" onclick="Click">Click</button>
-    <button id="btn2" onclick="Click2">Click2</button>
-    <button id="btn3" onclick="Click3">Click3</button>
+    <button id="btn">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <button id="btn3">Button 3</button>
   </div>
+  <script src="./script.js"></script>
 </body>
 
 </html>
-<script>
-  const Dolphinsscore = (96 + 108 + 89) / 3;
-  const Koalasscore = (88 + 91 + 110) / 3;
-
-  const click = document.getElementById("btn");
-
-  click.onclick = function () {
-    if (Dolphinsscore > Koalasscore) {
-      console.log("Dolphins win the trophy ");
-      document.querySelector(".select").textContent =
-        "Dolphins win the trophy ";
-    } else if (Koalasscore > Dolphinsscore) {
-      console.log("Koalas win the trophy ");
-      document.querySelector(".select").textContent = "Koalas win the trophy ";
-    } else if (Dolphinsscore === Koalasscore) {
-      console.log("Both win the trophy!");
-      document.querySelector(".select").textContent = "Both win the trophy!";
-    }
-    console.log(Dolphinsscore, Koalasscore);
-  };
-
-  const Dolphinsscore1 = (97 + 112 + 101) / 3;
-  const Koalasscore1 = (109 + 95 + 106) / 3;
-
-  const click2 = document.getElementById("btn2");
-
-  click2.onclick = function () {
-    if (Dolphinsscore1 > Koalasscore1 && Dolphinsscore1 >= 100) {
-      console.log("Dolphins win the trophy ");
-      document.querySelector(".select").textContent =
-        "Dolphins win the trophy ";
-    } else if (Koalasscore1 > Dolphinsscore1 && Koalasscore1 >= 100) {
-      console.log("Koalas win the trophy ");
-      document.querySelector(".select").textContent = "Koalas win the trophy ";
-    } else if (
-      Dolphinsscore1 === Koalasscore1 &&
-      Dolphinsscore1 >= 100 &&
-      Koalasscore1 >= 100
-    ) {
-      console.log("Both win the trophy!");
-      document.querySelector(".select").textContent = "Both win the trophy!";
-    } else {
-      console.log("No one wins the trophy ");
-      document.querySelector(".select").textContent = "No one wins the trophy ";
-    }
-
-    console.log(Dolphinsscore1, Koalasscore1);
-  };
-
-  const Dolphinsscore3 = (97 + 112 + 101) / 3;
-  const Koalasscore3 = (109 + 95 + 123) / 3;
-
-  const click3 = document.getElementById("btn3");
-
-  click3.onclick = function () {
-    if (Dolphinsscore3 > Koalasscore3 && Dolphinsscore3 >= 100) {
-      document.querySelector(".select").textContent =
-        "Dolphins win the trophy ";
-      console.log("Dolphins win the trophy ");
-    } else if (Koalasscore3 > Dolphinsscore3 && Koalasscore3 >= 100) {
-      document.querySelector(".select").textContent = "Koalas win the trophy ";
-      console.log("Koalas win the trophy ");
-    } else if (
-      Dolphinsscore3 === Koalasscore3 &&
-      Dolphinsscore3 >= 100 &&
-      Koalasscore3 >= 100
-    ) {
-      console.log("Both win the trophy!");
-      document.querySelector(".select").textContent = "Both win the trophy!";
-    } else {
-      document.querySelector(".select").textContent = "No one wins the trophy ";
-      console.log("No one wins the trophy");
-    }
-
-    console.log(Dolphinsscore3, Koalasscore3);
-  };
-</script>
